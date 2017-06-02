@@ -22,6 +22,8 @@
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/PmodHB3_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../Users/sburkhar/Desktop/Personal/School/Classes/Spring-2017/Projects/Project1/Project_1_release/ip_repo_544_p1/ip_repo_544_p1"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="XPMLibraries" Val="XPM_CDC"/>
+    <Option Name="XPMLibraries" Val="XPM_MEMORY"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/ece544_proj3.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/ece544_proj3.ip_user_files/ipstatic"/>
@@ -50,34 +52,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_nexys4IO_0_0/embsys_nexys4IO_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_microblaze_0_0/embsys_microblaze_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_gpio_0_0/embsys_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodENC_0_0/embsys_PmodENC_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodHB3_0_0/embsys_PmodHB3_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_PmodOLEDrgb_0_0/embsys_PmodOLEDrgb_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_timer_0_0/embsys_axi_timer_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_fit_timer_0_0/embsys_fit_timer_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_uartlite_0_0/embsys_axi_uartlite_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_axi_timebase_wdt_0_0/embsys_axi_timebase_wdt_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_dlmb_v10_0/embsys_dlmb_v10_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_v10_0/embsys_ilmb_v10_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_dlmb_bram_if_cntlr_0/embsys_dlmb_bram_if_cntlr_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_ilmb_bram_if_cntlr_0/embsys_ilmb_bram_if_cntlr_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_microblaze_0_axi_periph_0/embsys_microblaze_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_lmb_bram_0/embsys_lmb_bram_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_microblaze_0_axi_intc_0/embsys_microblaze_0_axi_intc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_microblaze_0_xlconcat_0/embsys_microblaze_0_xlconcat_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_mdm_1_0/embsys_mdm_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_clk_wiz_1_0/embsys_clk_wiz_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_rst_clk_wiz_1_100M_0/embsys_rst_clk_wiz_1_100M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="ip/embsys_xbar_0/embsys_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="embsys_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="embsys.bmm"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="hdl/embsys.v"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="hw_handoff/embsys_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="hdl/embsys.hwdef"/>
-        <CompFileExtendedInfo CompFileName="embsys.bd" FileRelPathName="hw_handoff/embsys.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hardware/debounce.v">
         <FileInfo>
@@ -118,6 +92,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="n4fpga"/>
@@ -156,18 +131,14 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
