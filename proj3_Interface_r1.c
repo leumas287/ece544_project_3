@@ -107,11 +107,14 @@
 #define MIN_KP					0
 #define MAX_KI					100
 #define MIN_KI					0
+#define MAX_INTEGRATE_ERROR		12000
+#define MIN_INTEGRATE_ERROR		0
 #define MAX_KD					100
 #define MIN_KD					0
 //Led mask
 #define LEDS_OFF				0x00000000
-
+//sseg decimal point helper
+#define N_DECIMAL_POINTS_PRECISION (10000) // n = 4. Four decimal points.
 /************************** Variable Definitions ****************************/
 //unsigned long timeStamp = 0;
 volatile u32			gpio_in;				// GPIO input port
@@ -125,44 +128,49 @@ uint16_t  				RotaryCnt;
 uint64_t 				timestamp = 0L;			// used in delay msec
 
 //u16 sw = 0;
-u8 RotaryIncr					= 1;
-bool RotaryNoNeg 				= true;
-u8 prevRotary 					= 0;
+u8 RotaryIncr							= 1;
+bool RotaryNoNeg 						= true;
+u8 prevRotary 							= 0;
 
 volatile int desiredRpm					= 0;
 volatile int actualRpm					= 0;
-u8 desiredMotorSpeed 			= 0;
-u8 prev_desiredMotorSpeed 		= 0;
-u8 desiredMotorSpeedIncrement	= 1;
-u8 desiredMotorDirection		= 0;
-u8 actualMotorSpeed				= 0;
-u8 prev_actualMotorSpeed		= 0;
+u8 desiredMotorSpeed 					= 0;
+u8 prev_desiredMotorSpeed 				= 0;
+u8 save_desiredMotorSpeed				= 0;
+u8 desiredMotorSpeedIncrement			= 1;
+u8 desiredMotorDirection				= 0;
+u8 actualMotorSpeed						= 0;
+u8 prev_actualMotorSpeed				= 0;
 
-volatile int signedError					= 0;
-volatile int prev_signedError				= 0;
-volatile int dt								= 0;
-volatile float p_term						= 0;
-volatile float i_term						= 0;
-volatile float d_term						= 0;
-volatile u8 motorOut						= 0;
-u8 prev_motorOut							= 0;
-volatile int motorOutRpm					= 0;
+volatile int signedError				= 0;
+volatile int prev_signedError			= 0;
+volatile int integrate_err				= 0;
+volatile int dt							= 0;
+volatile float p_term					= 0;
+volatile float i_term					= 0;
+volatile float d_term					= 0;
+volatile u8 motorOut					= 0;
+u8 prev_motorOut						= 0;
+volatile int motorOutRpm				= 0;
 
-bool kP_flag					;
+bool kP_flag;
 u8 kP_incr						= 1;
 int pcntrl_const 				= 0;
 int prev_kP						= 0;
 
-bool kI_flag					;
-u8 kI_incr						=1;
-int icntrl_const				=0;
-int prev_kI						=0;
+bool kI_flag;
+u8 kI_incr						= 1;
+int icntrl_const				= 0;
+int prev_kI						= 0;
 
-bool kD_flag					;
-u8 kD_incr						=1;
-int dcntrl_const				=0;
-int prev_kD						=0;
+bool kD_flag;
+u8 kD_incr						= 1;
+int dcntrl_const				= 0;
+int prev_kD						= 0;
 
+int integerPart					= 0;
+float diff						= 0;
+float decimals					= 0;
 u8 pEnc_switch 					= 0;
 u8 prev_pEnc_switch 			= 0;
 
@@ -305,6 +313,9 @@ void MotorControl(void)
 		 * 				Step 0: Check for stop/reset
 		 * 					Exit on press of the RotaryENC button
 		 * 					Reset on press of the center button
+		 *					Stop & start motor for step response,
+		 *					on press of left button
+		 *
 		 ********************************************************************/
 		// check if the rotary encoder pushbutton or BTNC is pressed
 		// exit the loop if either one is pressed.
@@ -317,9 +328,17 @@ void MotorControl(void)
 			actualMotorSpeed = 0;
 			XGpio_DiscreteWrite(&GPIOInst0, GPIO_0_OUTPUT_0_CHANNEL, 0);
 			pmodENC_clear_count(&pmodENC_inst);
-			//NX410_SSEG_setAllDigits(SSEGLO, CC_BLANK, CC_BLANK, CC_BLANK, CC_BLANK, DP_NONE);
 
 		}
+		if(NX4IO_isPressed(BTNL)){
+			save_desiredMotorSpeed = desiredMotorSpeed;
+			desiredMotorSpeed = 0;
+			actualMotorSpeed  = 0;
+			XGpio_DiscreteWrite(&GPIOInst0, GPIO_0_OUTPUT_0_CHANNEL, 0);
+			usleep(05000000);
+			desiredMotorSpeed = save_desiredMotorSpeed;
+		}
+
 		/********************************************************************
 		 * 				Step 1: Read the constant KP,KI,KD being selected
 		 * 					This drives the increment values of the
@@ -494,6 +513,7 @@ void MotorControl(void)
 					OLEDrgb_PutString(&pmodOLEDrgb_inst, "   ");
 					OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 4, 2);				// reset the cursor after "Kp:"
 					PMDIO_putnum(&pmodOLEDrgb_inst, pcntrl_const, 10);		// show the number in dec format
+					decimals = (float) (pcntrl_const)/100;
 					KP = pcntrl_const;
 					bin2bcd(KP, sseg_constant);
 				}
@@ -505,8 +525,10 @@ void MotorControl(void)
 					OLEDrgb_PutString(&pmodOLEDrgb_inst, "   ");
 					OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 4, 3);				// reset the cursor after "Ki:"
 					PMDIO_putnum(&pmodOLEDrgb_inst, icntrl_const, 10);		// show the number in dec format
-					bin2bcd(KI, sseg_constant);
+					decimals = (float) (icntrl_const)/1000;
 					KI = icntrl_const;
+					bin2bcd(KI, sseg_constant);
+
 				}
 			}
 			
@@ -516,15 +538,32 @@ void MotorControl(void)
 					OLEDrgb_PutString(&pmodOLEDrgb_inst, "   ");
 					OLEDrgb_SetCursor(&pmodOLEDrgb_inst, 4, 4);				// reset the cursor after "Kd:"
 					PMDIO_putnum(&pmodOLEDrgb_inst, dcntrl_const, 10);		// show the number in dec format
+					decimals = (float) (dcntrl_const)/100;
 					KD = dcntrl_const;
 					bin2bcd(KD, sseg_constant);
 				}
+			}
+
+			integerPart =(int)decimals;
+			int decimalPart = ((int)(decimals*N_DECIMAL_POINTS_PRECISION)%N_DECIMAL_POINTS_PRECISION);
+			if((decimalPart >> 4) > 0){
+				NX4IO_SSEG_setDecPt(SSEGHI, DIGIT7, true);
+			}
+			else if((decimalPart >> 3) > 0){
+				NX4IO_SSEG_setDecPt(SSEGHI, DIGIT6, true);
+			}
+			else if((decimalPart >> 2) > 0){
+				NX4IO_SSEG_setDecPt(SSEGHI, DIGIT5, true);
+			}
+			else if((decimalPart >> 1) > 0){
+				NX4IO_SSEG_setDecPt(SSEGHI, DIGIT4, true);
 			}
 
 			if(sseg_constant[6] == 0)
 			{
 				sseg_constant[6] = CC_BLANK;
 			}
+
 
 			NX4IO_SSEG_setDigit(SSEGHI, DIGIT7, sseg_constant[6]);	// display thousand digit
 			NX4IO_SSEG_setDigit(SSEGHI, DIGIT6, sseg_constant[7]);	// display hundred digit
@@ -554,6 +593,10 @@ void MotorControl(void)
 			} else {
 				desiredMotorSpeed = MAX_MOTOR_SPEED;
 			}
+		/*
+		}else if (save_desiredMotorSpeed > 0){
+			desiredMotorSpeed = save_desiredMotorSpeed;
+		*/
 		}else if (RotaryCnt < prevRotary){
 			int a = desiredMotorSpeed;
 			int b = desiredMotorSpeedIncrement;
@@ -563,6 +606,7 @@ void MotorControl(void)
 			} else {
 				desiredMotorSpeed = MIN_MOTOR_SPEED;
 			}
+
 		// If the Rotary Count is 0, set the motor speed to zero
 		// This synchronizes the rotary count and desired motor speed, allowing the scaling from
 		// 1, 5, 10 increment values.
@@ -708,7 +752,7 @@ int do_init()
 		exit(1);
 	}
 
-	pmodHB3_init(&pmodHB3_inst, 500, 50);
+	pmodHB3_init(&pmodHB3_inst, 4000, 0);
 
 	// initialize the GPIO instances
 	status = XGpio_Initialize(&GPIOInst0, GPIO_0_DEVICE_ID);
@@ -1035,15 +1079,22 @@ void FIT_Handler(void)
 	prev_signedError = signedError;
 	signedError = desiredRpm - actualRpm;
 	p_term = (float)(pcntrl_const)/100 * signedError;
+	integrate_err += signedError;
+	//saturate min/max integrate error
+	if(integrate_err > MAX_INTEGRATE_ERROR){
+		integrate_err = MAX_INTEGRATE_ERROR;
+	}
+	else if(integrate_err < 0){
+		integrate_err = MIN_INTEGRATE_ERROR;
+	}
 	
 	//Integral term
-	
-	i_term = (float)(icntrl_const)/1000 * signedError * dt;
+	i_term = (float)(icntrl_const)/1000 * signedError * integrate_err;
 	// Derivative term
-	d_term = (float)(dcntrl_const)/100 * signedError - prev_signedError;
+	d_term = (float)(dcntrl_const)/100 * (signedError - prev_signedError);
 	
 	//motorOutRpm = p_term + desiredRpm;
-	motorOutRpm = p_term + i_term + d_term;
+	motorOutRpm =desiredRpm + p_term + i_term + d_term;
 	
 	if(motorOutRpm > MAX_RPM){
 			motorOutRpm = MAX_RPM;
