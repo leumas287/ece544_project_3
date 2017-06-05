@@ -128,7 +128,7 @@ ARCHITECTURE embsys_axi_timebase_wdt_0_0_arch OF embsys_axi_timebase_wdt_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF embsys_axi_timebase_wdt_0_0_arch : ARCHITECTURE IS "embsys_axi_timebase_wdt_0_0,axi_timebase_wdt_top,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF embsys_axi_timebase_wdt_0_0_arch: ARCHITECTURE IS "embsys_axi_timebase_wdt_0_0,axi_timebase_wdt_top,{x_ipProduct=Vivado 2016.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_timebase_wdt,x_ipVersion=3.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_WDT_INTERVAL=30,C_WDT_ENABLE_ONCE=1,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=4,C_ENABLE_WINDOW_WDT=0,C_SST_COUNT_WIDTH=8,C_MAX_COUNT_WIDTH=32}";
+  ATTRIBUTE CORE_GENERATION_INFO OF embsys_axi_timebase_wdt_0_0_arch: ARCHITECTURE IS "embsys_axi_timebase_wdt_0_0,axi_timebase_wdt_top,{x_ipProduct=Vivado 2016.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_timebase_wdt,x_ipVersion=3.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_WDT_INTERVAL=28,C_WDT_ENABLE_ONCE=1,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=4,C_ENABLE_WINDOW_WDT=0,C_SST_COUNT_WIDTH=8,C_MAX_COUNT_WIDTH=32}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_arready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
@@ -156,7 +156,7 @@ BEGIN
   U0 : axi_timebase_wdt_top
     GENERIC MAP (
       C_FAMILY => "artix7",
-      C_WDT_INTERVAL => 30,
+      C_WDT_INTERVAL => 28,
       C_WDT_ENABLE_ONCE => 1,
       C_S_AXI_DATA_WIDTH => 32,
       C_S_AXI_ADDR_WIDTH => 4,

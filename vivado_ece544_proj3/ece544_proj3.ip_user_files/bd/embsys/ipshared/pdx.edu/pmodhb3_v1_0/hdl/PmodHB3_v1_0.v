@@ -26,7 +26,7 @@
 	(
 		// Users to add parameters here
 		parameter integer MOTOR_SPEED_CONTROL_WIDTH		= 12,
-		parameter integer MOTOR_SPEED_DETECT_WIDTH		= 10,
+		parameter integer MOTOR_SPEED_DETECT_WIDTH		= 16,
 		parameter integer MOTOR_SPEED_DETECT_COUNT		= 25_000_000,
 		// User parameters ends
 		// Do not modify the parameters beyond this line

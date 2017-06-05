@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date             : Sat May 27 15:12:00 2017
+| Date             : Sun Jun 04 18:04:15 2017
 | Host             : sburkhar-MOBL2 running 64-bit major release  (build 9200)
 | Command          : report_power -file n4fpga_power_routed.rpt -pb n4fpga_power_summary_routed.pb -rpx n4fpga_power_routed.rpx
 | Design           : n4fpga
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.294 |
-| Dynamic (W)              | 0.188 |
+| Total On-Chip Power (W)  | 0.292 |
+| Dynamic (W)              | 0.186 |
 | Device Static (W)        | 0.106 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 83.7  |
@@ -49,21 +49,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.019 |       12 |       --- |             --- |
-| Slice Logic              |     0.007 |     9139 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     3173 |     63400 |            5.00 |
+| Clocks                   |     0.020 |       12 |       --- |             --- |
+| Slice Logic              |     0.007 |     9158 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     3177 |     63400 |            5.01 |
 |   LUT as Distributed RAM |    <0.001 |      112 |     19000 |            0.59 |
-|   Register               |    <0.001 |     4054 |    126800 |            3.20 |
-|   CARRY4                 |    <0.001 |      167 |     15850 |            1.05 |
+|   Register               |    <0.001 |     4066 |    126800 |            3.21 |
+|   CARRY4                 |    <0.001 |      171 |     15850 |            1.08 |
 |   F7/F8 Muxes            |    <0.001 |      220 |     63400 |            0.35 |
 |   LUT as Shift Register  |    <0.001 |       81 |     19000 |            0.43 |
 |   Others                 |    <0.001 |      729 |       --- |             --- |
-| Signals                  |     0.013 |     6386 |       --- |             --- |
+| Signals                  |     0.012 |     6406 |       --- |             --- |
 | Block RAM                |     0.015 |       32 |       135 |           23.70 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
-| I/O                      |     0.027 |       86 |       210 |           40.95 |
+| I/O                      |     0.026 |       86 |       210 |           40.95 |
 | Static Power             |     0.106 |          |           |                 |
-| Total                    |     0.294 |          |           |                 |
+| Total                    |     0.292 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.070 |       0.054 |      0.016 |
+| Vccint    |       1.000 |     0.069 |       0.053 |      0.016 |
 | Vccaux    |       1.800 |     0.078 |       0.060 |      0.018 |
-| Vcco33    |       3.300 |     0.012 |       0.008 |      0.004 |
+| Vcco33    |       3.300 |     0.011 |       0.007 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.004 |       0.000 |      0.004 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -151,9 +151,9 @@ Table of Contents
 +-----------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                          | Power (W) |
 +-----------------------------------------------------------------------------------------------+-----------+
-| n4fpga                                                                                        |     0.188 |
+| n4fpga                                                                                        |     0.186 |
 |   DB                                                                                          |    <0.001 |
-|   EMBSYS                                                                                      |     0.159 |
+|   EMBSYS                                                                                      |     0.158 |
 |     PmodENC_0                                                                                 |     0.002 |
 |       inst                                                                                    |     0.002 |
 |         PMODENC_DEBOUNCER                                                                     |    <0.001 |
@@ -344,11 +344,11 @@ Table of Contents
 |       U0                                                                                      |    <0.001 |
 |         MDM_Core_I1                                                                           |    <0.001 |
 |           JTAG_CONTROL_I                                                                      |    <0.001 |
-|     microblaze_0                                                                              |     0.016 |
-|       U0                                                                                      |     0.016 |
-|         MicroBlaze_Core_I                                                                     |     0.016 |
-|           Performance.Core                                                                    |     0.016 |
-|             Data_Flow_I                                                                       |     0.009 |
+|     microblaze_0                                                                              |     0.015 |
+|       U0                                                                                      |     0.015 |
+|         MicroBlaze_Core_I                                                                     |     0.015 |
+|           Performance.Core                                                                    |     0.015 |
+|             Data_Flow_I                                                                       |     0.008 |
 |               ALU_I                                                                           |     0.002 |
 |                 ALL_Bits[0].ALU_Bit_I1                                                        |    <0.001 |
 |                   Last_Bit.I_ALU_LUT_2                                                        |    <0.001 |
@@ -726,7 +726,7 @@ Table of Contents
 |                 OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I                                         |    <0.001 |
 |                 OF_EX_MSR_Bits[30].Using_FDR.MSR_ex_I                                         |    <0.001 |
 |                 OF_EX_MSR_Bits[30].Using_FDR.MSR_of_I                                         |    <0.001 |
-|             Decode_I                                                                          |     0.006 |
+|             Decode_I                                                                          |     0.005 |
 |               PC_Module_I                                                                     |    <0.001 |
 |                 Incr_PC[0].MUXCY_XOR_I                                                        |    <0.001 |
 |                 Incr_PC[10].MUXCY_XOR_I                                                       |     0.000 |
@@ -981,7 +981,7 @@ Table of Contents
 |                 MUXCY_JUMP_CARRY3                                                             |    <0.001 |
 |                 MUXCY_JUMP_CARRY4                                                             |    <0.001 |
 |                 MUXCY_JUMP_CARRY5                                                             |     0.000 |
-|                 MUXCY_JUMP_CARRY6                                                             |     0.002 |
+|                 MUXCY_JUMP_CARRY6                                                             |     0.001 |
 |               mem_PipeRun_carry_and                                                           |    <0.001 |
 |                 MUXCY_I                                                                       |    <0.001 |
 |               mem_wait_on_ready_N_carry_or                                                    |    <0.001 |
@@ -1228,7 +1228,7 @@ Table of Contents
 |   pmodoledrgb_out_pin2_iobuf                                                                  |    <0.001 |
 |   pmodoledrgb_out_pin3_iobuf                                                                  |     0.000 |
 |   pmodoledrgb_out_pin4_iobuf                                                                  |    <0.001 |
-|   pmodoledrgb_out_pin7_iobuf                                                                  |     0.001 |
+|   pmodoledrgb_out_pin7_iobuf                                                                  |    <0.001 |
 |   pmodoledrgb_out_pin8_iobuf                                                                  |    <0.001 |
 |   pmodoledrgb_out_pin9_iobuf                                                                  |    <0.001 |
 +-----------------------------------------------------------------------------------------------+-----------+

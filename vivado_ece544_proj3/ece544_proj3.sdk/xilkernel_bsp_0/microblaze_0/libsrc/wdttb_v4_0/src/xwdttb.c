@@ -204,7 +204,6 @@ s32 XWdtTb_Initialize(XWdtTb *InstancePtr, u16 DeviceId)
 	ConfigPtr = XWdtTb_LookupConfig(DeviceId);
 	if (ConfigPtr == NULL) {
 		Status = XST_DEVICE_NOT_FOUND;
-		xil_printf("ERROR: Cannot find WDT device.");
 		goto End;
 	}
 

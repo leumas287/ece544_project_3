@@ -15,9 +15,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_nexys4IO
 # IP: bd/embsys/ip/embsys_PmodENC_0_0/embsys_PmodENC_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_PmodENC_0_0 || ORIG_REF_NAME==embsys_PmodENC_0_0}]
 
-# IP: bd/embsys/ip/embsys_PmodHB3_0_0/embsys_PmodHB3_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_PmodHB3_0_0 || ORIG_REF_NAME==embsys_PmodHB3_0_0}]
-
 # IP: bd/embsys/ip/embsys_PmodOLEDrgb_0_0/embsys_PmodOLEDrgb_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_PmodOLEDrgb_0_0 || ORIG_REF_NAME==embsys_PmodOLEDrgb_0_0}]
 
@@ -81,15 +78,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_rst_clk_
 # IP: bd/embsys/ip/embsys_xbar_0/embsys_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_xbar_0 || ORIG_REF_NAME==embsys_xbar_0}]
 
+# IP: bd/embsys/ip/embsys_PmodHB3_0_2/embsys_PmodHB3_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==embsys_PmodHB3_0_2 || ORIG_REF_NAME==embsys_PmodHB3_0_2}]
+
 # XDC: bd/embsys/ip/embsys_microblaze_0_0/embsys_microblaze_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==embsys_microblaze_0_0 || ORIG_REF_NAME==embsys_microblaze_0_0}] {/U0 }]/U0 ]]
 
 # XDC: bd/embsys/ip/embsys_microblaze_0_0/embsys_microblaze_0_0_ooc_debug.xdc
 
 # XDC: bd/embsys/ip/embsys_microblaze_0_0/embsys_microblaze_0_0_ooc.xdc
-
-# XDC: bd/embsys/ip/embsys_PmodOLEDrgb_0_0/embsys_PmodOLEDrgb_0_0_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==embsys_PmodOLEDrgb_0_0 || ORIG_REF_NAME==embsys_PmodOLEDrgb_0_0}] {/inst }]/inst ]]
 
 # XDC: bd/embsys/ip/embsys_PmodOLEDrgb_0_0/ip/PmodOLEDrgb_axi_quad_spi_0_0/PmodOLEDrgb_axi_quad_spi_0_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==PmodOLEDrgb_axi_quad_spi_0_0 || ORIG_REF_NAME==PmodOLEDrgb_axi_quad_spi_0_0}] {/U0 }]/U0 ]]
@@ -114,6 +111,9 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==PmodOLEDrgb_pmod_bridge_0_0 || ORIG_REF_NAME==PmodOLEDrgb_pmod_bridge_0_0}] {/inst }]/inst ]]
 
 # XDC: bd/embsys/ip/embsys_PmodOLEDrgb_0_0/ip/PmodOLEDrgb_pmod_bridge_0_0/src/pmod_concat_ooc.xdc
+
+# XDC: bd/embsys/ip/embsys_PmodOLEDrgb_0_0/embsys_PmodOLEDrgb_0_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==embsys_PmodOLEDrgb_0_0 || ORIG_REF_NAME==embsys_PmodOLEDrgb_0_0}] {/inst }]/inst ]]
 
 # XDC: bd/embsys/ip/embsys_axi_gpio_0_0/embsys_axi_gpio_0_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==embsys_axi_gpio_0_0 || ORIG_REF_NAME==embsys_axi_gpio_0_0}] {/U0 }]/U0 ]]

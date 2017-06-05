@@ -26,7 +26,7 @@
 // bit masks for the pmodHB3 peripheral
 
 // status register
-#define PMODHB3_MTR_SPD_DET_MSK	    0x000003FF
+#define PMODHB3_MTR_SPD_DET_MSK	    0x0000FFFF
 #define PMODHB3_MTR_SPD_DET_SCALING	(60*4)	//4 to get to Hz, 60 to go from Hz to RPM
 
 // control register

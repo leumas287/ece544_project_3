@@ -633,7 +633,8 @@ int NX4IO_SSEG_setDigit(enum _NX4IO_ssegbanks bank, enum _NX4IO_ssegdigits digit
 
 	// we made it!!
 	return XST_SUCCESS;
-};
+}
+
 
 
 /****************************************************************************/

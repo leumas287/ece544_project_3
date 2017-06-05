@@ -421,7 +421,7 @@
 
 	// Add user logic here
     always @* begin
-        slv_reg0 = {22'b0000_0000_0000_0000_0000_00, MOTOR_SPEED_DETECT[MOTOR_SPEED_DETECT_WIDTH-1:0]};
+        slv_reg0 = {MOTOR_SPEED_DETECT[MOTOR_SPEED_DETECT_WIDTH-1:0]};
     end
     
     assign MOTOR_DIRECTION_CONTROL = slv_reg1[MOTOR_SPEED_CONTROL_WIDTH];

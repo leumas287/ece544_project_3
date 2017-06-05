@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sat May 27 14:59:01 2017
-# Process ID: 15032
+# Start of session at: Sun Jun 04 17:56:30 2017
+# Process ID: 19612
 # Current directory: C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1
 # Command line: vivado.exe -log n4fpga.vds -mode batch -messageDb vivado.pb -notrace -source n4fpga.tcl
 # Log file: C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/n4fpga.vds
@@ -15,18 +15,18 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/VivadoProjects/ip_repo/PmodHB3_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/sburkhar/Desktop/Personal/School/Classes/Spring-2017/Projects/Project1/Project_1_release/ip_repo_544_p1/ip_repo_544_p1'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 304.738 ; gain = 98.090
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 302.031 ; gain = 95.277
 Command: synth_design -top n4fpga -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16292 
+INFO: Helper process launched with PID 4620 
 WARNING: [Synth 8-2507] parameter declaration becomes local in MOTOR_SPEED_CONTROLLER with formal parameter declaration list [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_CONTROLLER.v:31]
 WARNING: [Synth 8-2507] parameter declaration becomes local in debounce with formal parameter declaration list [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/imports/hardware/debounce.v:46]
 CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module debounce [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/imports/hardware/debounce.v:24]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 380.348 ; gain = 173.699
+Starting RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 387.516 ; gain = 180.762
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'n4fpga' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/imports/hardware/n4fpga.v:20]
 INFO: [Synth 8-638] synthesizing module 'embsys' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:13]
@@ -58,16 +58,16 @@ INFO: [Synth 8-638] synthesizing module 'encoder' [c:/VivadoProjects/ece544_proj
 INFO: [Synth 8-256] done synthesizing module 'encoder' (3#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/ece.pdx.edu/pmodenc_v1_0/src/encoder.v:40]
 INFO: [Synth 8-256] done synthesizing module 'pmodENC_v1_0' (4#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/ece.pdx.edu/pmodenc_v1_0/hdl/PmodENC_v1_0.v:25]
 INFO: [Synth 8-256] done synthesizing module 'embsys_PmodENC_0_0' (5#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodENC_0_0/synth/embsys_PmodENC_0_0.v:56]
-INFO: [Synth 8-638] synthesizing module 'embsys_PmodHB3_0_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodHB3_0_0/synth/embsys_PmodHB3_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'embsys_PmodHB3_0_2' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodHB3_0_2/synth/embsys_PmodHB3_0_2.v:56]
 INFO: [Synth 8-638] synthesizing module 'PmodHB3_v1_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0.v:25]
 	Parameter MOTOR_SPEED_CONTROL_WIDTH bound to: 12 - type: integer 
-	Parameter MOTOR_SPEED_DETECT_WIDTH bound to: 10 - type: integer 
+	Parameter MOTOR_SPEED_DETECT_WIDTH bound to: 16 - type: integer 
 	Parameter MOTOR_SPEED_DETECT_COUNT bound to: 25000000 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'PmodHB3_v1_0_S00_AXI' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0_S00_AXI.v:27]
 	Parameter MOTOR_SPEED_CONTROL_WIDTH bound to: 12 - type: integer 
-	Parameter MOTOR_SPEED_DETECT_WIDTH bound to: 10 - type: integer 
+	Parameter MOTOR_SPEED_DETECT_WIDTH bound to: 16 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
@@ -80,13 +80,13 @@ INFO: [Synth 8-638] synthesizing module 'MOTOR_SPEED_CONTROLLER' [c:/VivadoProje
 INFO: [Synth 8-256] done synthesizing module 'MOTOR_SPEED_CONTROLLER' (7#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_CONTROLLER.v:22]
 INFO: [Synth 8-638] synthesizing module 'MOTOR_SPEED_DETECTOR' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_DETECTOR.v:22]
 	Parameter COUNT bound to: 25000000 - type: integer 
-	Parameter WIDTH bound to: 10 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'MOTOR_SPEED_DETECTOR' (8#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_DETECTOR.v:22]
 INFO: [Synth 8-638] synthesizing module 'MOTOR_DIRECTION_CONTROLLER' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_DIRECTION_CONTROLLER.v:23]
-	Parameter WIDTH bound to: 10 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'MOTOR_DIRECTION_CONTROLLER' (9#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_DIRECTION_CONTROLLER.v:23]
 INFO: [Synth 8-256] done synthesizing module 'PmodHB3_v1_0' (10#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0.v:25]
-INFO: [Synth 8-256] done synthesizing module 'embsys_PmodHB3_0_0' (11#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodHB3_0_0/synth/embsys_PmodHB3_0_0.v:56]
+INFO: [Synth 8-256] done synthesizing module 'embsys_PmodHB3_0_2' (11#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodHB3_0_2/synth/embsys_PmodHB3_0_2.v:56]
 INFO: [Synth 8-638] synthesizing module 'embsys_PmodOLEDrgb_0_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_0/synth/embsys_PmodOLEDrgb_0_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'PmodOLEDrgb_v1_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/digilentinc.com/pmodoledrgb_v1_0/hdl/PmodOLEDrgb_v1_0.v:4]
 	Parameter C_AXI_LITE_SPI_DATA_WIDTH bound to: 32 - type: integer 
@@ -2572,7 +2572,7 @@ INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized1' (60#1) [
 INFO: [Synth 8-256] done synthesizing module 'embsys_axi_gpio_0_0' (61#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_axi_gpio_0_0/synth/embsys_axi_gpio_0_0.vhd:85]
 INFO: [Synth 8-638] synthesizing module 'embsys_axi_timebase_wdt_0_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_axi_timebase_wdt_0_0/synth/embsys_axi_timebase_wdt_0_0.vhd:84]
 	Parameter C_FAMILY bound to: artix7 - type: string 
-	Parameter C_WDT_INTERVAL bound to: 30 - type: integer 
+	Parameter C_WDT_INTERVAL bound to: 28 - type: integer 
 	Parameter C_WDT_ENABLE_ONCE bound to: 1 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
@@ -2582,7 +2582,7 @@ INFO: [Synth 8-638] synthesizing module 'embsys_axi_timebase_wdt_0_0' [c:/Vivado
 INFO: [Synth 8-3491] module 'axi_timebase_wdt_top' declared at 'c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/axi_timebase_wdt_v3_0/hdl/src/vhdl/axi_timebase_wdt_top.vhd:156' bound to instance 'U0' of component 'axi_timebase_wdt_top' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_axi_timebase_wdt_0_0/synth/embsys_axi_timebase_wdt_0_0.vhd:156]
 INFO: [Synth 8-638] synthesizing module 'axi_timebase_wdt_top' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/axi_timebase_wdt_v3_0/hdl/src/vhdl/axi_timebase_wdt_top.vhd:198]
 	Parameter C_FAMILY bound to: artix7 - type: string 
-	Parameter C_WDT_INTERVAL bound to: 30 - type: integer 
+	Parameter C_WDT_INTERVAL bound to: 28 - type: integer 
 	Parameter C_WDT_ENABLE_ONCE bound to: 1 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
@@ -2591,7 +2591,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_timebase_wdt_top' [c:/VivadoProject
 	Parameter C_MAX_COUNT_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'axi_timebase_wdt' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/axi_timebase_wdt_v3_0/hdl/src/vhdl/axi_timebase_wdt.vhd:209]
 	Parameter C_FAMILY bound to: artix7 - type: string 
-	Parameter C_WDT_INTERVAL bound to: 30 - type: integer 
+	Parameter C_WDT_INTERVAL bound to: 28 - type: integer 
 	Parameter C_WDT_ENABLE_ONCE bound to: 1 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
@@ -2599,7 +2599,7 @@ INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/VivadoPro
 INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/axi_timebase_wdt_v3_0/hdl/src/vhdl/axi_timebase_wdt.vhd:170]
 INFO: [Synth 8-638] synthesizing module 'timebase_wdt_core' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/axi_timebase_wdt_v3_0/hdl/src/vhdl/timebase_wdt_core.vhd:169]
 	Parameter C_FAMILY bound to: artix7 - type: string 
-	Parameter C_WDT_INTERVAL bound to: 30 - type: integer 
+	Parameter C_WDT_INTERVAL bound to: 28 - type: integer 
 	Parameter C_WDT_ENABLE_ONCE bound to: 1 - type: bool 
 	Parameter C_NATIVE_DWIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized32' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_0/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
@@ -7602,35 +7602,33 @@ INFO: [Synth 8-256] done synthesizing module 'slave_attachment__parameterized5' 
 INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif__parameterized5' (150#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_0/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/axi_lite_ipif.vhd:249]
 INFO: [Synth 8-256] done synthesizing module 'axi_intc' (151#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/axi_intc_v4_1/hdl/src/vhdl/axi_intc.vhd:335]
 INFO: [Synth 8-256] done synthesizing module 'embsys_microblaze_0_axi_intc_0' (152#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_axi_intc_0/synth/embsys_microblaze_0_axi_intc_0.vhd:89]
-INFO: [Synth 8-638] synthesizing module 'embsys_microblaze_0_axi_periph_0' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:1115]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_OEGTNN' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3189]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_OEGTNN' (153#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3189]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1X988FM' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3321]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1X988FM' (154#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3321]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_1LSUSSG' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3467]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_1LSUSSG' (155#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3467]
-INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_Z0V64X' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3613]
-INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_Z0V64X' (156#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3613]
-INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_10K59R8' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3759]
-INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_10K59R8' (157#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3759]
-INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_CO79RP' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3905]
-INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_CO79RP' (158#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3905]
-INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_17TSQV' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4051]
-INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_17TSQV' (159#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4051]
-INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_1B6JKGM' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4183]
-INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_1B6JKGM' (160#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4183]
-INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_A8EFSC' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4315]
-INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_A8EFSC' (161#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4315]
-WARNING: [Synth 8-350] instance 'm08_couplers' of module 'm08_couplers_imp_A8EFSC' requires 74 connections, but only 73 given [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:2877]
-INFO: [Synth 8-638] synthesizing module 'm09_couplers_imp_12FSMBH' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4573]
-INFO: [Synth 8-256] done synthesizing module 'm09_couplers_imp_12FSMBH' (162#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4573]
-INFO: [Synth 8-638] synthesizing module 'm10_couplers_imp_1LSYS80' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4705]
-INFO: [Synth 8-256] done synthesizing module 'm10_couplers_imp_1LSYS80' (163#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4705]
-INFO: [Synth 8-638] synthesizing module 'm11_couplers_imp_Z0XR01' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4837]
-INFO: [Synth 8-256] done synthesizing module 'm11_couplers_imp_Z0XR01' (164#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4837]
-WARNING: [Synth 8-350] instance 'm11_couplers' of module 'm11_couplers_imp_Z0XR01' requires 74 connections, but only 73 given [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3029]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_QRRRG2' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:5329]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_QRRRG2' (165#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:5329]
+INFO: [Synth 8-638] synthesizing module 'embsys_microblaze_0_axi_periph_0' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:1113]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_OEGTNN' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:2997]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_OEGTNN' (153#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:2997]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1X988FM' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3129]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1X988FM' (154#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3129]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_1LSUSSG' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3275]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_1LSUSSG' (155#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3275]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_Z0V64X' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3421]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_Z0V64X' (156#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3421]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_10K59R8' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3567]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_10K59R8' (157#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3567]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_CO79RP' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3713]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_CO79RP' (158#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3713]
+INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_17TSQV' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3859]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_17TSQV' (159#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3859]
+INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_1B6JKGM' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3991]
+INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_1B6JKGM' (160#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:3991]
+INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_A8EFSC' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4123]
+INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_A8EFSC' (161#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4123]
+INFO: [Synth 8-638] synthesizing module 'm09_couplers_imp_12FSMBH' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4269]
+INFO: [Synth 8-256] done synthesizing module 'm09_couplers_imp_12FSMBH' (162#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4269]
+INFO: [Synth 8-638] synthesizing module 'm10_couplers_imp_1LSYS80' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4401]
+INFO: [Synth 8-256] done synthesizing module 'm10_couplers_imp_1LSYS80' (163#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4401]
+INFO: [Synth 8-638] synthesizing module 'm11_couplers_imp_Z0XR01' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4533]
+INFO: [Synth 8-256] done synthesizing module 'm11_couplers_imp_Z0XR01' (164#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4533]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_QRRRG2' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4913]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_QRRRG2' (165#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4913]
 INFO: [Synth 8-638] synthesizing module 'embsys_xbar_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_xbar_0/synth/embsys_xbar_0.v:60]
 INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_10_axi_crossbar' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
 	Parameter C_FAMILY bound to: artix7 - type: string 
@@ -7901,9 +7899,9 @@ INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc_
 INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_10_crossbar_sasd' (174#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_crossbar_sasd.v:79]
 INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_10_axi_crossbar' (175#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
 INFO: [Synth 8-256] done synthesizing module 'embsys_xbar_0' (176#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_xbar_0/synth/embsys_xbar_0.v:60]
-INFO: [Synth 8-256] done synthesizing module 'embsys_microblaze_0_axi_periph_0' (177#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:1115]
-WARNING: [Synth 8-350] instance 'microblaze_0_axi_periph' of module 'embsys_microblaze_0_axi_periph_0' requires 297 connections, but only 245 given [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:788]
-INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1SR2TDT' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:5095]
+INFO: [Synth 8-256] done synthesizing module 'embsys_microblaze_0_axi_periph_0' (177#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:1113]
+WARNING: [Synth 8-350] instance 'microblaze_0_axi_periph' of module 'embsys_microblaze_0_axi_periph_0' requires 265 connections, but only 243 given [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:788]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1SR2TDT' [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4679]
 INFO: [Synth 8-638] synthesizing module 'embsys_dlmb_bram_if_cntlr_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_dlmb_bram_if_cntlr_0/synth/embsys_dlmb_bram_if_cntlr_0.vhd:84]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000011111111111111111 
@@ -8002,7 +8000,7 @@ INFO: [Synth 8-638] synthesizing module 'FDS' [C:/Xilinx/Vivado/2016.2/scripts/r
 INFO: [Synth 8-256] done synthesizing module 'FDS' (182#1) [C:/Xilinx/Vivado/2016.2/scripts/rt/data/unisim_comp.v:4088]
 INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (183#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/lmb_v10_v3_0/hdl/vhdl/lmb_v10.vhd:140]
 INFO: [Synth 8-256] done synthesizing module 'embsys_dlmb_v10_0' (184#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_dlmb_v10_0/synth/embsys_dlmb_v10_0.vhd:89]
-WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'embsys_dlmb_v10_0' requires 25 connections, but only 24 given [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:5241]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'embsys_dlmb_v10_0' requires 25 connections, but only 24 given [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4825]
 INFO: [Synth 8-638] synthesizing module 'embsys_ilmb_bram_if_cntlr_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_ilmb_bram_if_cntlr_0/synth/embsys_ilmb_bram_if_cntlr_0.vhd:84]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000011111111111111111 
@@ -8091,7 +8089,7 @@ INFO: [Synth 8-638] synthesizing module 'embsys_ilmb_v10_0' [c:/VivadoProjects/e
 	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
 INFO: [Synth 8-3491] module 'lmb_v10' declared at 'c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/lmb_v10_v3_0/hdl/vhdl/lmb_v10.vhd:92' bound to instance 'U0' of component 'lmb_v10' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_ilmb_v10_0/synth/embsys_ilmb_v10_0.vhd:160]
 INFO: [Synth 8-256] done synthesizing module 'embsys_ilmb_v10_0' (186#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_ilmb_v10_0/synth/embsys_ilmb_v10_0.vhd:89]
-WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'embsys_ilmb_v10_0' requires 25 connections, but only 24 given [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:5287]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'embsys_ilmb_v10_0' requires 25 connections, but only 24 given [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4871]
 INFO: [Synth 8-638] synthesizing module 'embsys_lmb_bram_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_lmb_bram_0/synth/embsys_lmb_bram_0.vhd:78]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -17763,7 +17761,7 @@ INFO: [Synth 8-3491] module 'blk_mem_gen_v8_3_3' declared at 'c:/VivadoProjects/
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_USE_ECC bound to: 0 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'embsys_lmb_bram_0' (197#1) [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_lmb_bram_0/synth/embsys_lmb_bram_0.vhd:78]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1SR2TDT' (198#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:5095]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1SR2TDT' (198#1) [C:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/hdl/embsys.v:4679]
 INFO: [Synth 8-638] synthesizing module 'embsys_microblaze_0_xlconcat_0' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_microblaze_0_xlconcat_0/synth/embsys_microblaze_0_xlconcat_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'xlconcat' [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ipshared/xilinx.com/xlconcat_v2_1/xlconcat.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -18121,7 +18119,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected p
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[28]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:02:18 ; elapsed = 00:02:42 . Memory (MB): peak = 767.773 ; gain = 561.125
+Finished RTL Elaboration : Time (s): cpu = 00:02:12 ; elapsed = 00:02:37 . Memory (MB): peak = 769.910 ; gain = 563.156
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -18133,7 +18131,7 @@ Report Check Netlist:
 INFO: [Synth 8-3295] tying undriven pin FIFO_EXISTS.CLK_CROSS_I:SPISR_0_CMD_Error_cdc_from_spi to constant 0 [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_0/ipshared/xilinx.com/axi_quad_spi_v3_2/hdl/src/vhdl/qspi_core_interface.vhd:1656]
 INFO: [Synth 8-3295] tying undriven pin FIFO_EXISTS.CLK_CROSS_I:Mst_N_Slv_mode_cdc_from_spi to constant 0 [c:/VivadoProjects/ece544_proj3/ece544_proj3.srcs/sources_1/bd/embsys/ip/embsys_PmodOLEDrgb_0_0/ipshared/xilinx.com/axi_quad_spi_v3_2/hdl/src/vhdl/qspi_core_interface.vhd:1656]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:21 ; elapsed = 00:02:45 . Memory (MB): peak = 767.773 ; gain = 561.125
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:15 ; elapsed = 00:02:39 . Memory (MB): peak = 769.910 ; gain = 563.156
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1121 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -18224,25 +18222,25 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 16 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 893.613 ; gain = 0.031
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 895.547 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:47 ; elapsed = 00:03:14 . Memory (MB): peak = 893.613 ; gain = 686.965
+Finished Constraint Validation : Time (s): cpu = 00:02:41 ; elapsed = 00:03:09 . Memory (MB): peak = 895.547 ; gain = 688.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:47 ; elapsed = 00:03:14 . Memory (MB): peak = 893.613 ; gain = 686.965
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:41 ; elapsed = 00:03:09 . Memory (MB): peak = 895.547 ; gain = 688.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for EMBSYS/microblaze_0/U0. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 85).
-Applied set_property DONT_TOUCH = true for EMBSYS/PmodOLEDrgb_0/inst. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 92).
-Applied set_property DONT_TOUCH = true for EMBSYS/PmodOLEDrgb_0/inst/axi_quad_spi_0/U0. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 95).
-Applied set_property DONT_TOUCH = true for EMBSYS/PmodOLEDrgb_0/inst/axi_gpio_0/U0. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 106).
-Applied set_property DONT_TOUCH = true for EMBSYS/PmodOLEDrgb_0/inst/pmod_bridge_0/inst. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 114).
+Applied set_property DONT_TOUCH = true for EMBSYS/PmodOLEDrgb_0/inst/axi_quad_spi_0/U0. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 92).
+Applied set_property DONT_TOUCH = true for EMBSYS/PmodOLEDrgb_0/inst/axi_gpio_0/U0. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 103).
+Applied set_property DONT_TOUCH = true for EMBSYS/PmodOLEDrgb_0/inst/pmod_bridge_0/inst. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 111).
+Applied set_property DONT_TOUCH = true for EMBSYS/PmodOLEDrgb_0/inst. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 116).
 Applied set_property DONT_TOUCH = true for EMBSYS/axi_gpio_0/U0. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 119).
 Applied set_property DONT_TOUCH = true for EMBSYS/axi_timer_0/U0. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 127).
 Applied set_property DONT_TOUCH = true for EMBSYS/axi_uartlite_0/U0. (constraint file  C:/VivadoProjects/ece544_proj3/ece544_proj3.runs/synth_1/dont_touch.xdc, line 134).
@@ -18280,7 +18278,7 @@ Applied set_property DONT_TOUCH = true for EMBSYS/microblaze_0_xlconcat. (constr
 Applied set_property DONT_TOUCH = true for EMBSYS/nexys4IO_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for EMBSYS/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:48 ; elapsed = 00:03:14 . Memory (MB): peak = 893.613 ; gain = 686.965
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:42 ; elapsed = 00:03:10 . Memory (MB): peak = 895.547 ; gain = 688.793
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "sampleClk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -18433,7 +18431,7 @@ INFO: [Synth 8-5545] ROM "sec1_interrupt" won't be mapped to RAM because address
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'an_reg' using encoding 'sequential' in module 'sevensegment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:05 ; elapsed = 00:03:35 . Memory (MB): peak = 893.613 ; gain = 686.965
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:01 ; elapsed = 00:03:32 . Memory (MB): peak = 895.547 ; gain = 688.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -18451,7 +18449,7 @@ Detailed RTL Component Info :
 	   3 Input     32 Bit       Adders := 1     
 	   3 Input     16 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 7     
@@ -18477,11 +18475,11 @@ Detailed RTL Component Info :
 	               33 Bit    Registers := 3     
 	               32 Bit    Registers := 76    
 	               30 Bit    Registers := 1     
-	               16 Bit    Registers := 6     
+	               16 Bit    Registers := 7     
 	               15 Bit    Registers := 1     
 	               14 Bit    Registers := 1     
 	               13 Bit    Registers := 3     
-	               10 Bit    Registers := 3     
+	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 6     
 	                8 Bit    Registers := 21    
 	                7 Bit    Registers := 1     
@@ -18507,7 +18505,7 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 1     
-	   2 Input     10 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 3     
 	   2 Input      9 Bit        Muxes := 6     
 	   3 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 19    
@@ -18607,13 +18605,10 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 Module MOTOR_SPEED_DETECTOR 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     10 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module MOTOR_DIRECTION_CONTROLLER 
 Detailed RTL Component Info : 
@@ -19944,7 +19939,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:03:05 ; elapsed = 00:03:36 . Memory (MB): peak = 893.613 ; gain = 686.965
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:03:01 ; elapsed = 00:03:33 . Memory (MB): peak = 895.547 ; gain = 688.793
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -19985,9 +19980,9 @@ WARNING: [Synth 8-3917] design n4fpga has port JA[2] driven by constant 0
 WARNING: [Synth 8-3917] design n4fpga has port JA[1] driven by constant 0
 WARNING: [Synth 8-3917] design n4fpga has port JA[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:03:12 ; elapsed = 00:03:43 . Memory (MB): peak = 893.613 ; gain = 686.965
+Finished Cross Boundary Optimization : Time (s): cpu = 00:03:08 ; elapsed = 00:03:40 . Memory (MB): peak = 895.547 ; gain = 688.793
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:03:12 ; elapsed = 00:03:43 . Memory (MB): peak = 893.613 ; gain = 686.965
+Finished Parallel Reinference  : Time (s): cpu = 00:03:08 ; elapsed = 00:03:40 . Memory (MB): peak = 895.547 ; gain = 688.793
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -20032,14 +20027,14 @@ INFO: [Synth 8-3886] merging instance 'EMBSYS/PmodHB3_0/inst/PmodHB3_v1_0_S00_AX
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (EMBSYS/PmodHB3_0/\inst/PmodHB3_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'EMBSYS/PmodHB3_0/inst/PmodHB3_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'EMBSYS/PmodHB3_0/inst/PmodHB3_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (EMBSYS/PmodHB3_0/\inst/PmodHB3_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module embsys_PmodHB3_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_bresp_reg[0]) is unused and will be removed from module embsys_PmodHB3_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module embsys_PmodHB3_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module embsys_PmodHB3_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module embsys_PmodHB3_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module embsys_PmodHB3_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module embsys_PmodHB3_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_rresp_reg[0]) is unused and will be removed from module embsys_PmodHB3_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module embsys_PmodHB3_0_2.
+INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_bresp_reg[0]) is unused and will be removed from module embsys_PmodHB3_0_2.
+INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module embsys_PmodHB3_0_2.
+INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module embsys_PmodHB3_0_2.
+INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module embsys_PmodHB3_0_2.
+INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module embsys_PmodHB3_0_2.
+INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module embsys_PmodHB3_0_2.
+INFO: [Synth 8-3332] Sequential element (inst/PmodHB3_v1_0_S00_AXI_inst/axi_rresp_reg[0]) is unused and will be removed from module embsys_PmodHB3_0_2.
 INFO: [Synth 8-3886] merging instance 'EMBSYS/PmodOLEDrgb_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[27]' (FDR) to 'EMBSYS/PmodOLEDrgb_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[26]'
 INFO: [Synth 8-3886] merging instance 'EMBSYS/PmodOLEDrgb_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[26]' (FDR) to 'EMBSYS/PmodOLEDrgb_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[25]'
 INFO: [Synth 8-3886] merging instance 'EMBSYS/PmodOLEDrgb_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[25]' (FDR) to 'EMBSYS/PmodOLEDrgb_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[24]'
@@ -20318,9 +20313,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (EMBSYS/mi
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (EMBSYS/microblaze_0/U0/\LOCKSTEP_Out_reg[4026] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:03:37 ; elapsed = 00:04:10 . Memory (MB): peak = 893.613 ; gain = 686.965
+Finished Area Optimization : Time (s): cpu = 00:03:34 ; elapsed = 00:04:07 . Memory (MB): peak = 895.547 ; gain = 688.793
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:03:37 ; elapsed = 00:04:10 . Memory (MB): peak = 893.613 ; gain = 686.965
+Finished Parallel Area Optimization  : Time (s): cpu = 00:03:34 ; elapsed = 00:04:07 . Memory (MB): peak = 895.547 ; gain = 688.793
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -20336,10 +20331,10 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'EMBSYS/microblaze_0/U0/Reset' to pin 'EMBSYS/rst_clk_wiz_1_100M/U0/mb_reset_reg/Q'
 INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:50 ; elapsed = 00:04:24 . Memory (MB): peak = 893.613 ; gain = 686.965
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:47 ; elapsed = 00:04:21 . Memory (MB): peak = 895.547 ; gain = 688.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:09 ; elapsed = 00:04:46 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Timing Optimization : Time (s): cpu = 00:04:03 ; elapsed = 00:04:38 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -20351,16 +20346,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:17 ; elapsed = 00:04:55 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Technology Mapping : Time (s): cpu = 00:04:11 ; elapsed = 00:04:45 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:04:17 ; elapsed = 00:04:55 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:04:11 ; elapsed = 00:04:45 . Memory (MB): peak = 933.527 ; gain = 726.773
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:17 ; elapsed = 00:04:55 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:11 ; elapsed = 00:04:45 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -20377,7 +20372,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:19 ; elapsed = 00:04:56 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished IO Insertion : Time (s): cpu = 00:04:12 ; elapsed = 00:04:47 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -20390,7 +20385,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:19 ; elapsed = 00:04:57 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:12 ; elapsed = 00:04:47 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -20402,25 +20397,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:21 ; elapsed = 00:04:58 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:14 ; elapsed = 00:04:49 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:21 ; elapsed = 00:04:59 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:14 ; elapsed = 00:04:49 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:21 ; elapsed = 00:04:59 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:14 ; elapsed = 00:04:49 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:21 ; elapsed = 00:04:59 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:15 ; elapsed = 00:04:49 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -20470,13 +20465,13 @@ Report Cell Usage:
 |1     |AND2B1L    |     1|
 |2     |BSCANE2    |     1|
 |3     |BUFG       |     5|
-|4     |CARRY4     |    97|
+|4     |CARRY4     |   101|
 |5     |LUT1       |   295|
-|6     |LUT2       |   450|
-|7     |LUT3       |   578|
-|8     |LUT4       |   534|
-|9     |LUT5       |   785|
-|10    |LUT6       |  1296|
+|6     |LUT2       |   448|
+|7     |LUT3       |   577|
+|8     |LUT4       |   530|
+|9     |LUT5       |   754|
+|10    |LUT6       |  1337|
 |11    |LUT6_2     |    80|
 |12    |MMCME2_ADV |     1|
 |13    |MULT_AND   |     1|
@@ -20492,7 +20487,7 @@ Report Cell Usage:
 |23    |SRLC16E    |     8|
 |24    |XORCY      |    94|
 |25    |FD         |     8|
-|26    |FDCE       |   434|
+|26    |FDCE       |   446|
 |27    |FDC_1      |     1|
 |28    |FDE        |    32|
 |29    |FDPE       |    55|
@@ -20510,19 +20505,19 @@ Report Instance Areas:
 +------+------------------------------------------------------------------------------------------------+------------------------------------------------+------+
 |      |Instance                                                                                        |Module                                          |Cells |
 +------+------------------------------------------------------------------------------------------------+------------------------------------------------+------+
-|1     |top                                                                                             |                                                |  9726|
-|2     |  EMBSYS                                                                                        |embsys                                          |  9345|
+|1     |top                                                                                             |                                                |  9745|
+|2     |  EMBSYS                                                                                        |embsys                                          |  9364|
 |3     |    PmodENC_0                                                                                   |embsys_PmodENC_0_0                              |   439|
 |4     |      inst                                                                                      |pmodENC_v1_0                                    |   438|
 |5     |        PMODENC_DEBOUNCER                                                                       |debouncer                                       |   117|
 |6     |        PMODENC_ENCODER                                                                         |encoder                                         |   131|
 |7     |        pmodENC_v1_0_S00_AXI_inst                                                               |pmodENC_v1_0_S00_AXI                            |   190|
-|8     |    PmodHB3_0                                                                                   |embsys_PmodHB3_0_0                              |   351|
-|9     |      inst                                                                                      |PmodHB3_v1_0                                    |   351|
+|8     |    PmodHB3_0                                                                                   |embsys_PmodHB3_0_2                              |   370|
+|9     |      inst                                                                                      |PmodHB3_v1_0                                    |   370|
 |10    |        PmodHB3_v1_0_S00_AXI_inst                                                               |PmodHB3_v1_0_S00_AXI                            |   200|
 |11    |        motor_direction_controller                                                              |MOTOR_DIRECTION_CONTROLLER                      |     2|
 |12    |        motor_speed_controller                                                                  |MOTOR_SPEED_CONTROLLER                          |    39|
-|13    |        motor_speed_detector                                                                    |MOTOR_SPEED_DETECTOR                            |   110|
+|13    |        motor_speed_detector                                                                    |MOTOR_SPEED_DETECTOR                            |   129|
 |14    |    PmodOLEDrgb_0                                                                               |embsys_PmodOLEDrgb_0_0                          |  1047|
 |15    |      inst                                                                                      |PmodOLEDrgb_v1_0                                |  1047|
 |16    |        pmod_bridge_0                                                                           |PmodOLEDrgb_pmod_bridge_0_0                     |     0|
@@ -21467,13 +21462,13 @@ Report Instance Areas:
 |955   |  DB                                                                                            |debounce__parameterized0                        |   213|
 +------+------------------------------------------------------------------------------------------------+------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:21 ; elapsed = 00:04:59 . Memory (MB): peak = 932.805 ; gain = 726.156
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:15 ; elapsed = 00:04:49 . Memory (MB): peak = 933.527 ; gain = 726.773
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 13476 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:38 ; elapsed = 00:04:15 . Memory (MB): peak = 932.805 ; gain = 501.262
-Synthesis Optimization Complete : Time (s): cpu = 00:04:21 ; elapsed = 00:04:59 . Memory (MB): peak = 932.805 ; gain = 726.156
+Synthesis finished with 0 errors, 0 critical warnings and 13474 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:39 ; elapsed = 00:04:00 . Memory (MB): peak = 933.527 ; gain = 500.422
+Synthesis Optimization Complete : Time (s): cpu = 00:04:15 ; elapsed = 00:04:50 . Memory (MB): peak = 933.527 ; gain = 726.773
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 979 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 983 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 12 load pin(s).
@@ -21495,8 +21490,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC16E => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1395 Infos, 255 Warnings, 1 Critical Warnings and 0 Errors encountered.
+1395 Infos, 253 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:21 ; elapsed = 00:04:52 . Memory (MB): peak = 932.805 ; gain = 628.066
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 932.805 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat May 27 15:04:13 2017...
+synth_design: Time (s): cpu = 00:04:13 ; elapsed = 00:04:38 . Memory (MB): peak = 933.527 ; gain = 631.496
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 933.527 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 04 18:01:32 2017...

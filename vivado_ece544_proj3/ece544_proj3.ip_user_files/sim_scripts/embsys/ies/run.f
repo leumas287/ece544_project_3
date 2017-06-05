@@ -29,12 +29,6 @@
   "../../../bd/embsys/ipshared/ece.pdx.edu/pmodenc_v1_0/src/debouncer.v" \
   "../../../bd/embsys/ipshared/ece.pdx.edu/pmodenc_v1_0/src/encoder.v" \
   "../../../bd/embsys/ip/embsys_PmodENC_0_0/sim/embsys_PmodENC_0_0.v" \
-  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0_S00_AXI.v" \
-  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_DIRECTION_CONTROLLER.v" \
-  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_CONTROLLER.v" \
-  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_DETECTOR.v" \
-  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0.v" \
-  "../../../bd/embsys/ip/embsys_PmodHB3_0_0/sim/embsys_PmodHB3_0_0.v" \
 -endlib
 -makelib ies/dist_mem_gen_v8_0_10 \
   "../../../ipstatic/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" \
@@ -278,6 +272,12 @@
 -makelib ies/xil_defaultlib \
   "../../../bd/embsys/ip/embsys_xbar_0/sim/embsys_xbar_0.v" \
   "../../../bd/embsys/hdl/embsys.v" \
+  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0_S00_AXI.v" \
+  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_DIRECTION_CONTROLLER.v" \
+  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_CONTROLLER.v" \
+  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_DETECTOR.v" \
+  "../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0.v" \
+  "../../../bd/embsys/ip/embsys_PmodHB3_0_2/sim/embsys_PmodHB3_0_2.v" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

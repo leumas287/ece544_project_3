@@ -14,7 +14,6 @@ BEGIN OS
  PARAMETER config_time = true
  PARAMETER mem_table = (8,20)
  PARAMETER msgq_capacity = 100
- PARAMETER n_prio = 5
  PARAMETER sched_type = SCHED_PRIO
  PARAMETER stdin = axi_uartlite_0
  PARAMETER stdout = axi_uartlite_0

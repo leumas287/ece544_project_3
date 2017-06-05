@@ -7,15 +7,15 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
-../src/ece544_IP_Test.c \
+../src/ece544_proj3_app.c \
 ../src/platform.c 
 
 OBJS += \
-./src/ece544_IP_Test.o \
+./src/ece544_proj3_app.o \
 ./src/platform.o 
 
 C_DEPS += \
-./src/ece544_IP_Test.d \
+./src/ece544_proj3_app.d \
 ./src/platform.d 
 
 

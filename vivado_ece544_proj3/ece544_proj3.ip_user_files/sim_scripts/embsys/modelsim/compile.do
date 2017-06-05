@@ -90,12 +90,6 @@ vlog -work xil_defaultlib -64 -incr "+incdir+../../../ipstatic/axi_infrastructur
 "../../../bd/embsys/ipshared/ece.pdx.edu/pmodenc_v1_0/src/debouncer.v" \
 "../../../bd/embsys/ipshared/ece.pdx.edu/pmodenc_v1_0/src/encoder.v" \
 "../../../bd/embsys/ip/embsys_PmodENC_0_0/sim/embsys_PmodENC_0_0.v" \
-"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0_S00_AXI.v" \
-"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_DIRECTION_CONTROLLER.v" \
-"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_CONTROLLER.v" \
-"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_DETECTOR.v" \
-"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0.v" \
-"../../../bd/embsys/ip/embsys_PmodHB3_0_0/sim/embsys_PmodHB3_0_0.v" \
 
 vlog -work dist_mem_gen_v8_0_10 -64 -incr "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/clk_wiz_v5_3" "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/clk_wiz_v5_3" \
 "../../../ipstatic/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" \
@@ -339,6 +333,12 @@ vlog -work axi_crossbar_v2_1_10 -64 -incr "+incdir+../../../ipstatic/axi_infrast
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/clk_wiz_v5_3" "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/clk_wiz_v5_3" \
 "../../../bd/embsys/ip/embsys_xbar_0/sim/embsys_xbar_0.v" \
 "../../../bd/embsys/hdl/embsys.v" \
+"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0_S00_AXI.v" \
+"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_DIRECTION_CONTROLLER.v" \
+"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_CONTROLLER.v" \
+"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/src/MOTOR_SPEED_DETECTOR.v" \
+"../../../bd/embsys/ipshared/pdx.edu/pmodhb3_v1_0/hdl/PmodHB3_v1_0.v" \
+"../../../bd/embsys/ip/embsys_PmodHB3_0_2/sim/embsys_PmodHB3_0_2.v" \
 
 vlog -work xil_defaultlib "glbl.v"
 

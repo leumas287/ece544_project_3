@@ -85,7 +85,7 @@
 
 #define SCHED_TYPE SCHED_PRIO
 
-#define N_PRIO 5
+#define N_PRIO 32
 
 #define CONFIG_PRIOSCHED true
 
