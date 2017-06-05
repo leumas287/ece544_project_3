@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ece544_proj3_xilkernel_app/src/ece544_IP_Test.c&apos; to &apos;ece544_proj3_app.c&apos;" description="Rename resource &apos;ece544_IP_Test.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ece544_IP_Test.c" name="ece544_proj3_app.c" stamp="1496628350601" updateReferences="true"/>
+</session>
